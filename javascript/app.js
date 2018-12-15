@@ -16,14 +16,14 @@ $(document).ready(function () {
         var firstTrain = moment($("#time").val().trim(), "HH:mm").subtract(10, "years").format("X");
         var freq = $("#frequency").val().trim();
         
-        var newTrain = {
+        var addTrain = {
             name: name,
             destination: destination,
             firstTrain: firstTrain,
             freq: freq
         }
 
-        database.ref().push(newTrain);
+        database.ref().push(addTrain);
         
         $("#name").val("");
         $("#destination").val("");
@@ -31,20 +31,16 @@ $(document).ready(function () {
         $("#frequency").val("")
 
     })
-    database.ref().orderByChild("dateAdded").on("child_added", function (childSnapshot) {
+    database.ref().orderByChild("dateAdded").on("child_added", function (snapshot) {
 
-       var data = childSnapshot.val();
+       var data = snapshot.val();
        var trainNames = data.name;
        var trainDestination = data.destination;
        var trainFrequency = data.freq;
        var theFirstTrain = data.firstTrain;
-        console.log(theFirstTrain);
-        // Calculate the minutes until arrival using hardcore math
-        // To calculate the minutes till arrival, take the current time in unix subtract the FirstTrain time and find the modulus between the difference and the frequency  
        var tRemainder = moment().diff(moment.unix(theFirstTrain), "minutes") % trainFrequency;
        var tMinutes = trainFrequency - tRemainder;
     
-        // To calculate the arrival time, add the tMinutes to the currrent time
        var tArrival = moment().add(tMinutes, "m").format("hh:mm A");
     
         var table = `<tr>

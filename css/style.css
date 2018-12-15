@@ -1,14 +1,27 @@
+body {
+    margin: auto 0;
+    background-image: url("../images/5ff49e8b17b1545fb0d769f5b73c7a29.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+.jumbotron {
+    background: rgb(255,162,0,0.8);
+    color: white;
+}
 .form-control {
     padding: 10px;
 
 }
 .schedule {
-    border: 1px solid rgb(220,53,69);
-    width: 75%;
-}
-.add-on {
-    border: 1px solid rgb(220,53,69);
-    width: 75%;
-  
+    background: rgb(255,162,0,0.8);
+    color: white;
 
 }
+   
+.add-on {
+    background: rgb(255,162,0,0.8);
+    color: white;
+}
+
