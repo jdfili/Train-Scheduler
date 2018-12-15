@@ -4,9 +4,11 @@ The Train-Schdeuler displays a train's name, destination, and arrival time, and 
 
 To get started, just add the neccesary information into the appropraite text fields!
 
-Built With:
+#Built With:
 
  - Bootsrap https://getbootstrap.com/
  - Moment.JS https://momentjs.com/
 
- Author: John Filiaga
+ #Author: 
+ 
+ - John Filiaga
