@@ -9,6 +9,9 @@ To get started, just add the neccesary information into the appropraite text fie
  - Bootsrap https://getbootstrap.com/
  - Moment.JS https://momentjs.com/
 
- # Author: 
+# Published Version:
+-  https://jdfili.github.io/Train-Scheduler/ 
+
+# Author: 
  
  - John Filiaga
